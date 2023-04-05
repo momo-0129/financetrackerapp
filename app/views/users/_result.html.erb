@@ -1,6 +1,8 @@
-
+<div class="results-block">
+  <%= render 'layouts/messages' %>
+</div>
 <% if @stock %>
-  <div class="card card-header results-block" id="test">
+  <div class="card card-header results-block">
   this is results
     <strong>Symbol: </strong> <%= @stock[:ticker] %>
     <strong>Name: </strong> <%= @stock[:name] %>
