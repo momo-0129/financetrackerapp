@@ -20,5 +20,16 @@
 
 .results-block {
   display: inline-block;
-  margin-top: 50px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logout-button {
+  margin-right: 5px;
+}
+
+.alert {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

@@ -12,7 +12,7 @@ class StocksController < ApplicationController
         respond_to do |format|
           format.turbo_stream {
             flash.now[:alert] = "Please enter a valid symbol to search"
-            render turbo_stream: turbo_stream.update("test", partial: "users/result")            
+            render turbo_stream: turbo_stream.update("test", partial: "layouts/messages")            
           }
         end
       end
@@ -20,7 +20,7 @@ class StocksController < ApplicationController
       respond_to do |format| 
         format.turbo_stream {
           flash.now[:alert] = "Can not be empty"
-          render turbo_stream: turbo_stream.update("test", partial: "users/result")
+          render turbo_stream: turbo_stream.update("test", partial: "layouts/messages")
         }
       end
     end   
