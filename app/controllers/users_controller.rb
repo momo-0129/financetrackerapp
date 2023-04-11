@@ -9,8 +9,8 @@ class UsersController < ApplicationController
 
   def search
     if params[:friend].present? 
-      @friend = params[:friend]
-      if @friend  
+      @friends = User.search(params[:friend])
+      if @friends  
         respond_to do |format|
           format.turbo_stream {
             render turbo_stream: turbo_stream.update("friendslist", partial: "users/friend_result")
