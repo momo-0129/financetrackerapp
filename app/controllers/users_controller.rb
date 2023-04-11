@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     else
       respond_to do |format| 
         format.turbo_stream {
-          flash.now[:alert] = "Can not be empty"
+          flash.now[:alert] = "Input can not be empty"
           render turbo_stream: turbo_stream.update("friendslist", partial: "layouts/messages")
         }
       end
